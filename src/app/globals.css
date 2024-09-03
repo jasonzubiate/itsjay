@@ -2,9 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply m-0 p-0 box-border;
+}
+
 @font-face {
   font-family: "Tiempos Headline";
   src: url("/fonts.TIEMPOSHEADLINE-REGULARITALIC_0.OTF");
+}
+
+@font-face {
+  font-family: "OffBit 101 Bold";
+  src: url("/fonts/OffBit/OffBit-101Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.offbit-101-bold {
+  font-family: "OffBit 101 Bold", sans-serif;
 }
 
 ::selection {
@@ -13,4 +28,51 @@
 
 .tiempos {
   font-family: "Tiempos Headline", serif;
+}
+
+.slider {
+  perspective: 175px;
+  perspective-origin: 50% 100%;
+}
+
+.card {
+  @apply absolute top-1/2 left-1/2 w-[65%] h-[500px] bg-neutral-800 border-r border-neutral-700 rounded-md overflow-hidden flex flex-col;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.card::after {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full border border-neutral-700 rounded-md z-10;
+}
+
+.card-info {
+  @apply flex items-center bg-neutral-800 z-10 px-4 py-3;
+}
+
+.card-item {
+  flex: 1;
+}
+
+.card-item p {
+  @apply text-neutral-400 text-[8px];
+}
+
+.card-item:nth-child(2) {
+  text-align: center;
+}
+
+.card-item:nth-child(2) p {
+  @apply text-[10px] font-medium text-neutral-50;
+}
+
+.card-item:nth-child(3) {
+  text-align: right;
+}
+
+.video-player {
+  @apply w-full h-full overflow-hidden;
+}
+
+.video-player > div {
+  @apply relative scale-150 lg:scale-125;
 }
