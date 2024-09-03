@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Tiempos Headline";
+  src: url("/fonts.TIEMPOSHEADLINE-REGULARITALIC_0.OTF");
+}
+
+::selection {
+  background-color: rgb(227, 255, 127);
+}
+
+.tiempos {
+  font-family: "Tiempos Headline", serif;
+}
