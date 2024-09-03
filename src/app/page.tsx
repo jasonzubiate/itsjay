@@ -13,7 +13,7 @@ export default function Home() {
           <span>Zubiate.</span>
         </h1>
 
-        <p>Currently in development, come back soon.</p>
+        <p className="text-center">Currently in development, come back soon.</p>
       </div>
     </main>
   );
